@@ -1,638 +1,691 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BUAWS — Find a Forever Home</title>
-  <meta name="description" content="Bahria University Animal Welfare Society — Adopt a rescue animal and give them a second chance at life." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BUAWS — Find a Forever Home</title>
+<meta content="Bahria University Animal Welfare Society — Adopt a rescue animal and give them a second chance at life." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&amp;family=DM+Sans:wght@300;400;500&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/style.css" rel="stylesheet">
+</link></head>
 <body>
-
-  <!-- NOISE OVERLAY -->
-  <div class="noise-overlay"></div>
-
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">
-        <span class="logo-paw">🐾</span>
-        <span class="logo-text">BUAWS</span>
-      </a>
-      <div class="nav-links">
-        <a href="#animals">Animals</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#adopt" class="nav-cta">Adopt Now</a>
-      </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="nav-mobile" id="navMobile">
-      <a href="#animals">Animals</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="#adopt">Adopt Now</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <header class="hero" id="home">
-    <div class="hero-bg">
-      <div class="hero-blob blob-1"></div>
-      <div class="hero-blob blob-2"></div>
-      <div class="hero-blob blob-3"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-tag">
-        <span class="dot"></span>
+<!-- NOISE OVERLAY -->
+<div class="noise-overlay"></div>
+<!-- NAV -->
+<nav class="nav" id="nav">
+<div class="nav-inner">
+<a class="nav-logo" href="#">
+<span class="logo-paw">🐾</span>
+<span class="logo-text">BUAWS</span>
+</a>
+<div class="nav-links">
+<a href="#animals">Animals</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+<a class="nav-cta" href="#adopt">Adopt Now</a>
+</div>
+<button aria-label="Toggle menu" class="nav-toggle" id="navToggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+<div class="nav-mobile" id="navMobile">
+<a href="#animals">Animals</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+<a href="#adopt">Adopt Now</a>
+</div>
+</nav>
+<!-- HERO -->
+<header class="hero" id="home">
+<div class="hero-bg">
+<div class="hero-blob blob-1"></div>
+<div class="hero-blob blob-2"></div>
+<div class="hero-blob blob-3"></div>
+</div>
+<div class="hero-content">
+<div class="hero-tag">
+<span class="dot"></span>
         Bahria University · E-8 Islamabad
       </div>
-      <h1 class="hero-title">
+<h1 class="hero-title">
         Every animal<br/>
-        <em>deserves</em> a<br/>
+<em>deserves</em> a<br/>
         forever home.
       </h1>
-      <p class="hero-sub">
+<p class="hero-sub">
         BUAWS rescues, rehabilitates, and rehomes animals from around the twin cities. Browse our animals and open your heart — and home.
       </p>
-      <div class="hero-actions">
-        <a href="#animals" class="btn btn-primary">Meet the Animals</a>
-        <a href="#about" class="btn btn-ghost">Our Story</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">11</span>
-          <span class="stat-label">Animals Listed</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">8</span>
-          <span class="stat-label">Cats</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">3</span>
-          <span class="stat-label">Dogs</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero-scroll">
-      <span>Scroll to meet them</span>
-      <div class="scroll-line"></div>
-    </div>
-  </header>
-
-  <!-- FILTER BAR -->
-  <section class="filter-section" id="animals">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Ready for adoption</p>
-        <h2 class="section-title">Meet Our Animals</h2>
-      </div>
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All Animals</button>
-        <button class="filter-btn" data-filter="cat">Cats</button>
-        <button class="filter-btn" data-filter="dog">Dogs</button>
-        <button class="filter-btn" data-filter="adoption">For Adoption</button>
-        <button class="filter-btn" data-filter="stray">Strays Needing Help</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ANIMAL GRID -->
-  <section class="animals-section">
-    <div class="container">
-      <div class="animals-grid" id="animalsGrid">
-
-        <!-- TAYYAB'S CAT -->
-        <article class="animal-card" data-type="cat" data-status="adoption">
-          <div class="card-media">
-            <div class="media-slider" data-folder="assets/images/cat_lahore_tayyab-adoption">
-              <img src="assets/images/cat_lahore_tayyab-adoption/1.jpeg" alt="Cat for adoption" loading="lazy" />
-              <img src="assets/images/cat_lahore_tayyab-adoption/2.jpeg" alt="Cat for adoption" loading="lazy" />
-              <img src="assets/images/cat_lahore_tayyab-adoption/3.jpeg" alt="Cat for adoption" loading="lazy" />
-            </div>
-            <div class="media-controls">
-              <button class="mc-prev" aria-label="Previous">‹</button>
-              <div class="mc-dots"></div>
-              <button class="mc-next" aria-label="Next">›</button>
-            </div>
-            <div class="card-badge badge-adoption">For Adoption</div>
-            <div class="card-type-icon">🐱</div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="meta-location">📍 Lahore</span>
-              <span class="meta-contact">Contact: Tayyab</span>
-            </div>
-            <h3 class="card-name">Lahore Cat</h3>
-            <p class="card-desc">A lovely cat from Lahore looking for a permanent, loving home. Has video documentation available. Friendly and in need of a caring family.</p>
-            <div class="card-tags">
-              <span class="tag">Cat</span>
-              <span class="tag">Domestic</span>
-              <span class="tag tag-green">Adoption Ready</span>
-            </div>
-            <div class="card-actions">
-              <button class="btn btn-sm btn-primary adopt-btn" data-name="Lahore Cat (Tayyab)">Adopt Me</button>
-              <button class="btn btn-sm btn-outline gallery-btn" data-folder="assets/images/cat_lahore_tayyab-adoption" data-images='["assets/images/cat_lahore_tayyab-adoption/1.jpeg","assets/images/cat_lahore_tayyab-adoption/2.jpeg","assets/images/cat_lahore_tayyab-adoption/3.jpeg"]' data-videos='["assets/images/cat_lahore_tayyab-adoption/4.mp4","assets/images/cat_lahore_tayyab-adoption/5.mp4","assets/images/cat_lahore_tayyab-adoption/6.mp4","assets/images/cat_lahore_tayyab-adoption/7.mp4","assets/images/cat_lahore_tayyab-adoption/8.mp4","assets/images/cat_lahore_tayyab-adoption/9.mp4"]'>View Gallery</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- NAVALCOMPLEX STRAY -->
-        <article class="animal-card" data-type="cat" data-status="stray">
-          <div class="card-media">
-            <div class="media-slider">
-              <div class="video-thumb">
-                <video src="assets/images/cat_navalcomplex_hibas-stray/1.mp4" muted loop playsinline></video>
-                <div class="play-overlay">▶</div>
-              </div>
-            </div>
-            <div class="card-badge badge-stray">Stray</div>
-            <div class="card-type-icon">🐱</div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="meta-location">📍 Naval Complex</span>
-              <span class="meta-contact">Contact: Hiba</span>
-            </div>
-            <h3 class="card-name">Naval Complex Stray</h3>
-            <p class="card-desc">Stray cat spotted near the Naval Complex area. Documented by Hiba. Needs rescue and a loving home or foster care.</p>
-            <div class="card-tags">
-              <span class="tag">Cat</span>
-              <span class="tag">Stray</span>
-              <span class="tag tag-orange">Needs Rescue</span>
-            </div>
-            <div class="card-actions">
-              <button class="btn btn-sm btn-primary adopt-btn" data-name="Naval Complex Stray (Hiba)">I Can Help</button>
-              <button class="btn btn-sm btn-outline gallery-btn" data-images='[]' data-videos='["assets/images/cat_navalcomplex_hibas-stray/1.mp4","assets/images/cat_navalcomplex_hibas-stray/2.mp4","assets/images/cat_navalcomplex_hibas-stray/3.mp4"]'>View Videos</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- PHASE 2 EYE RUPTURE STRAY -->
-        <article class="animal-card urgent" data-type="cat" data-status="stray">
-          <div class="card-media">
-            <div class="media-slider">
-              <img src="assets/images/cat_phase2_eyerupture-stray/1.jpeg" alt="Cat needing medical help" loading="lazy" />
-              <img src="assets/images/cat_phase2_eyerupture-stray/2.jpeg" alt="Cat needing medical help" loading="lazy" />
-              <img src="assets/images/cat_phase2_eyerupture-stray/3.jpeg" alt="Cat needing medical help" loading="lazy" />
-            </div>
-            <div class="media-controls">
-              <button class="mc-prev" aria-label="Previous">‹</button>
-              <div class="mc-dots"></div>
-              <button class="mc-next" aria-label="Next">›</button>
-            </div>
-            <div class="card-badge badge-urgent">Urgent Care</div>
-            <div class="card-type-icon">🐱</div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="meta-location">📍 Phase 2</span>
-            </div>
-            <h3 class="card-name">Phase 2 Stray <span class="urgent-tag">⚠ Urgent</span></h3>
-            <p class="card-desc">Stray cat from Phase 2 suffering from eye rupture. Requires immediate veterinary attention. Please reach out if you can foster or cover medical costs.</p>
-            <div class="card-tags">
-              <span class="tag">Cat</span>
-              <span class="tag">Stray</span>
-              <span class="tag tag-red">Medical Needed</span>
-            </div>
-            <div class="card-actions">
-              <button class="btn btn-sm btn-urgent adopt-btn" data-name="Phase 2 Eye Rupture Cat">Urgent Help</button>
-              <button class="btn btn-sm btn-outline gallery-btn" data-images='["assets/images/cat_phase2_eyerupture-stray/1.jpeg","assets/images/cat_phase2_eyerupture-stray/2.jpeg","assets/images/cat_phase2_eyerupture-stray/3.jpeg","assets/images/cat_phase2_eyerupture-stray/4.jpeg","assets/images/cat_phase2_eyerupture-stray/5.jpeg","assets/images/cat_phase2_eyerupture-stray/6.jpeg","assets/images/cat_phase2_eyerupture-stray/7.jpeg","assets/images/cat_phase2_eyerupture-stray/8.jpeg"]' data-videos='[]'>View Gallery</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- TENCH BATA GREY STRAY -->
-        <article class="animal-card" data-type="cat" data-status="stray">
-          <div class="card-media">
-            <div class="media-slider">
-              <img src="assets/images/cat_tenchbata_grey-stray/1.jpeg" alt="Grey stray cat" loading="lazy" />
-              <img src="assets/images/cat_tenchbata_grey-stray/2.jpeg" alt="Grey stray cat" loading="lazy" />
-              <img src="assets/images/cat_tenchbata_grey-stray/3.jpeg" alt="Grey stray cat" loading="lazy" />
-            </div>
-            <div class="media-controls">
-              <button class="mc-prev" aria-label="Previous">‹</button>
-              <div class="mc-dots"></div>
-              <button class="mc-next" aria-label="Next">›</button>
-            </div>
-            <div class="card-badge badge-stray">Stray</div>
-            <div class="card-type-icon">🐱</div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="meta-location">📍 Tench Bata</span>
-            </div>
-            <h3 class="card-name">Grey Tench Bata Stray</h3>
-            <p class="card-desc">Beautiful grey stray cat found in Tench Bata. Has multiple photos and videos. Sweet temperament and in need of a warm, safe home.</p>
-            <div class="card-tags">
-              <span class="tag">Cat</span>
-              <span class="tag">Grey</span>
-              <span class="tag tag-orange">Needs Home</span>
-            </div>
-            <div class="card-actions">
-              <button class="btn btn-sm btn-primary adopt-btn" data-name="Grey Tench Bata Cat">Adopt Me</button>
-              <button class="btn btn-sm btn-outline gallery-btn" data-images='["assets/images/cat_tenchbata_grey-stray/1.jpeg","assets/images/cat_tenchbata_grey-stray/2.jpeg","assets/images/cat_tenchbata_grey-stray/3.jpeg","assets/images/cat_tenchbata_grey-stray/4.jpeg","assets/images/cat_tenchbata_grey-stray/5.jpeg","assets/images/cat_tenchbata_grey-stray/8.jpeg","assets/images/cat_tenchbata_grey-stray/9.jpeg","assets/images/cat_tenchbata_grey-stray/10.jpeg","assets/images/cat_tenchbata_grey-stray/11.jpeg","assets/images/cat_tenchbata_grey-stray/12.jpeg","assets/images/cat_tenchbata_grey-stray/13.jpeg","assets/images/cat_tenchbata_grey-stray/14.jpeg","assets/images/cat_tenchbata_grey-stray/15.jpeg"]' data-videos='["assets/images/cat_tenchbata_grey-stray/6.mp4","assets/images/cat_tenchbata_grey-stray/7.mp4"]'>View Gallery</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- WHITE PERSIAN -->
-        <article class="animal-card" data-type="cat" data-status="adoption">
-          <div class="card-media">
-            <div class="media-slider">
-              <img src="assets/images/cat_tenchbata_white-persian/2.jpeg" alt="White Persian cat" loading="lazy" />
-              <img src="assets/images/cat_tenchbata_white-persian/5.jpeg" alt="White Persian cat" loading="lazy" />
-              <img src="assets/images/cat_tenchbata_white-persian/8.jpeg" alt="White Persian cat" loading="lazy" />
-            </div>
-            <div class="media-controls">
-              <button class="mc-prev" aria-label="Previous">‹</button>
-              <div class="mc-dots"></div>
-              <button class="mc-next" aria-label="Next">›</button>
-            </div>
-            <div class="card-badge badge-adoption">For Adoption</div>
-            <div class="card-type-icon">🐱</div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="meta-location">📍 Tench Bata</span>
-            </div>
-            <h3 class="card-name">White Persian</h3>
-            <p class="card-desc">A gorgeous white Persian cat from Tench Bata. Fluffy, elegant, and ready to be someone's precious companion. Extensive photo and video documentation available.</p>
-            <div class="card-tags">
-              <span class="tag">Cat</span>
-              <span class="tag">Persian</span>
-              <span class="tag tag-green">Adoption Ready</span>
-            </div>
-            <div class="card-actions">
-              <button class="btn btn-sm btn-primary adopt-btn" data-name="White Persian Cat">Adopt Me</button>
-              <button class="btn btn-sm btn-outline gallery-btn" data-images='["assets/images/cat_tenchbata_white-persian/2.jpeg","assets/images/cat_tenchbata_white-persian/5.jpeg","assets/images/cat_tenchbata_white-persian/8.jpeg","assets/images/cat_tenchbata_white-persian/9.jpeg","assets/images/cat_tenchbata_white-persian/10.jpeg","assets/images/cat_tenchbata_white-persian/11.jpeg","assets/images/cat_tenchbata_white-persian/12.jpeg"]' data-videos='["assets/images/cat_tenchbata_white-persian/1.mp4","assets/images/cat_tenchbata_white-persian/3.mp4","assets/images/cat_tenchbata_white-persian/4.mp4","assets/images/cat_tenchbata_white-persian/6.mp4","assets/images/cat_tenchbata_white-persian/7.mp4"]'>View Gallery</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- BISCUIT -->
-        <article class="animal-card" data-type="cat" data-status="adoption">
-          <div class="card-media">
-            <div class="media-slider">
-              <img src="assets/images/cat_unknown_biscuit/biscuit.jpeg" alt="Biscuit the cat" loading="lazy" />
-              <img src="assets/images/cat_unknown_biscuit/biscuit2.jpeg" alt="Biscuit the cat" loading="lazy" />
-            </div>
-            <div class="media-controls">
-              <button class="mc-prev" aria-label="Previous">‹</button>
-              <div class="mc-dots"></div>
-              <button class="mc-next" aria-label="Next">›</button>
-            </div>
-            <div class="card-badge badge-adoption">For Adoption</div>
-            <div class="card-type-icon">🐱</div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="meta-location">📍 Location TBD</span>
-            </div>
-            <h3 class="card-name">Biscuit 🍪</h3>
-            <p class="card-desc">Meet Biscuit — as sweet as the name suggests! This adorable kitty is looking for a forever home. Don't let the biscuit crumble alone.</p>
-            <div class="card-tags">
-              <span class="tag">Cat</span>
-              <span class="tag">Domestic</span>
-              <span class="tag tag-green">Adoption Ready</span>
-            </div>
-            <div class="card-actions">
-              <button class="btn btn-sm btn-primary adopt-btn" data-name="Biscuit">Adopt Biscuit</button>
-              <button class="btn btn-sm btn-outline gallery-btn" data-images='["assets/images/cat_unknown_biscuit/biscuit.jpeg","assets/images/cat_unknown_biscuit/biscuit2.jpeg"]' data-videos='[]'>View Photos</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- TURKISH ANGORA -->
-        <article class="animal-card" data-type="cat" data-status="adoption">
-          <div class="card-media">
-            <div class="media-slider">
-              <img src="assets/images/cat_unknown_turkish-angora/1.jpeg" alt="Turkish Angora cat" loading="lazy" />
-              <img src="assets/images/cat_unknown_turkish-angora/2.jpeg" alt="Turkish Angora cat" loading="lazy" />
-            </div>
-            <div class="media-controls">
-              <button class="mc-prev" aria-label="Previous">‹</button>
-              <div class="mc-dots"></div>
-              <button class="mc-next" aria-label="Next">›</button>
-            </div>
-            <div class="card-badge badge-adoption">For Adoption</div>
-            <div class="card-type-icon">🐱</div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="meta-location">📍 Location TBD</span>
-            </div>
-            <h3 class="card-name">Turkish Angora</h3>
-            <p class="card-desc">A beautiful Turkish Angora looking for a loving home. Elegant, silky fur and a gentle personality. Videos available upon request.</p>
-            <div class="card-tags">
-              <span class="tag">Cat</span>
-              <span class="tag">Turkish Angora</span>
-              <span class="tag tag-green">Adoption Ready</span>
-            </div>
-            <div class="card-actions">
-              <button class="btn btn-sm btn-primary adopt-btn" data-name="Turkish Angora">Adopt Me</button>
-              <button class="btn btn-sm btn-outline gallery-btn" data-images='["assets/images/cat_unknown_turkish-angora/1.jpeg","assets/images/cat_unknown_turkish-angora/2.jpeg"]' data-videos='["assets/images/cat_unknown_turkish-angora/3.mp4","assets/images/cat_unknown_turkish-angora/4.mp4","assets/images/cat_unknown_turkish-angora/5.mp4"]'>View Gallery</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- WAH CANTT ROADKILL -->
-        <article class="animal-card urgent" data-type="cat" data-status="stray">
-          <div class="card-media">
-            <div class="media-slider">
-              <img src="assets/images/cat_wahcantt_roadkill/1.jpeg" alt="Injured roadkill cat" loading="lazy" />
-              <img src="assets/images/cat_wahcantt_roadkill/2.jpeg" alt="Injured roadkill cat" loading="lazy" />
-              <img src="assets/images/cat_wahcantt_roadkill/3.jpeg" alt="Injured roadkill cat" loading="lazy" />
-            </div>
-            <div class="media-controls">
-              <button class="mc-prev" aria-label="Previous">‹</button>
-              <div class="mc-dots"></div>
-              <button class="mc-next" aria-label="Next">›</button>
-            </div>
-            <div class="card-badge badge-urgent">Urgent Care</div>
-            <div class="card-type-icon">🐱</div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="meta-location">📍 Wah Cantt</span>
-            </div>
-            <h3 class="card-name">Wah Cantt Survivor <span class="urgent-tag">⚠ Urgent</span></h3>
-            <p class="card-desc">Cat found near Wah Cantt after a road incident. Requires urgent medical care and a foster or permanent home to recover safely. Please help.</p>
-            <div class="card-tags">
-              <span class="tag">Cat</span>
-              <span class="tag">Injured</span>
-              <span class="tag tag-red">Medical Needed</span>
-            </div>
-            <div class="card-actions">
-              <button class="btn btn-sm btn-urgent adopt-btn" data-name="Wah Cantt Survivor">Urgent Help</button>
-              <button class="btn btn-sm btn-outline gallery-btn" data-images='["assets/images/cat_wahcantt_roadkill/1.jpeg","assets/images/cat_wahcantt_roadkill/2.jpeg","assets/images/cat_wahcantt_roadkill/3.jpeg"]' data-videos='["assets/images/cat_wahcantt_roadkill/4.mp4","assets/images/cat_wahcantt_roadkill/5.mp4","assets/images/cat_wahcantt_roadkill/6.mp4"]'>View Gallery</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- LEO THE DOG -->
-        <article class="animal-card" data-type="dog" data-status="adoption">
-          <div class="card-media">
-            <div class="media-slider">
-              <div class="video-thumb">
-                <video src="assets/images/dog_askari11_leo/1.mp4" muted loop playsinline></video>
-                <div class="play-overlay">▶</div>
-              </div>
-            </div>
-            <div class="card-badge badge-adoption">For Adoption</div>
-            <div class="card-type-icon">🐶</div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="meta-location">📍 Askari 11</span>
-            </div>
-            <h3 class="card-name">Leo 🦁</h3>
-            <p class="card-desc">Meet Leo, a charismatic dog from Askari 11! He's full of life and energy. Multiple videos show his wonderful personality. He's searching for his forever human.</p>
-            <div class="card-tags">
-              <span class="tag">Dog</span>
-              <span class="tag">Playful</span>
-              <span class="tag tag-green">Adoption Ready</span>
-            </div>
-            <div class="card-actions">
-              <button class="btn btn-sm btn-primary adopt-btn" data-name="Leo">Adopt Leo</button>
-              <button class="btn btn-sm btn-outline gallery-btn" data-images='[]' data-videos='["assets/images/dog_askari11_leo/1.mp4","assets/images/dog_askari11_leo/2.mp4","assets/images/dog_askari11_leo/3.mp4","assets/images/dog_askari11_leo/4.mp4","assets/images/dog_askari11_leo/5.mp4"]'>View Videos</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- ASKARI PUPPY -->
-        <article class="animal-card" data-type="dog" data-status="adoption">
-          <div class="card-media">
-            <div class="media-slider">
-              <div class="video-thumb">
-                <video src="assets/images/dog_askari11_puppy-ridazulfiqar/1.mp4" muted loop playsinline></video>
-                <div class="play-overlay">▶</div>
-              </div>
-            </div>
-            <div class="card-badge badge-adoption">For Adoption</div>
-            <div class="card-type-icon">🐶</div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="meta-location">📍 Askari 11</span>
-              <span class="meta-contact">Contact: Rida Zulfiqar</span>
-            </div>
-            <h3 class="card-name">Askari Puppy</h3>
-            <p class="card-desc">An adorable puppy from Askari 11, documented by Rida Zulfiqar. Young, energetic, and ready to grow up in a loving family. The perfect addition to a home!</p>
-            <div class="card-tags">
-              <span class="tag">Dog</span>
-              <span class="tag">Puppy</span>
-              <span class="tag tag-green">Adoption Ready</span>
-            </div>
-            <div class="card-actions">
-              <button class="btn btn-sm btn-primary adopt-btn" data-name="Askari Puppy (Rida Zulfiqar)">Adopt Puppy</button>
-              <button class="btn btn-sm btn-outline gallery-btn" data-images='[]' data-videos='["assets/images/dog_askari11_puppy-ridazulfiqar/1.mp4","assets/images/dog_askari11_puppy-ridazulfiqar/2.mp4"]'>View Videos</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- CHIKU LABRADOR -->
-        <article class="animal-card" data-type="dog" data-status="adoption">
-          <div class="card-media">
-            <div class="media-slider">
-              <img src="assets/images/dog_unknown_chiku-labrador/1.jpeg" alt="Chiku the Labrador" loading="lazy" />
-              <img src="assets/images/dog_unknown_chiku-labrador/3.jpeg" alt="Chiku the Labrador" loading="lazy" />
-              <img src="assets/images/dog_unknown_chiku-labrador/4.jpeg" alt="Chiku the Labrador" loading="lazy" />
-            </div>
-            <div class="media-controls">
-              <button class="mc-prev" aria-label="Previous">‹</button>
-              <div class="mc-dots"></div>
-              <button class="mc-next" aria-label="Next">›</button>
-            </div>
-            <div class="card-badge badge-adoption">For Adoption</div>
-            <div class="card-type-icon">🐶</div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="meta-location">📍 Location TBD</span>
-            </div>
-            <h3 class="card-name">Chiku 🍫 (Labrador)</h3>
-            <p class="card-desc">Chiku is a lovable Labrador with the warmest eyes and gentlest soul. Labs are known for their loyalty and family-friendliness — Chiku is no exception. Don't miss this one!</p>
-            <div class="card-tags">
-              <span class="tag">Dog</span>
-              <span class="tag">Labrador</span>
-              <span class="tag tag-green">Adoption Ready</span>
-            </div>
-            <div class="card-actions">
-              <button class="btn btn-sm btn-primary adopt-btn" data-name="Chiku (Labrador)">Adopt Chiku</button>
-              <button class="btn btn-sm btn-outline gallery-btn" data-images='["assets/images/dog_unknown_chiku-labrador/1.jpeg","assets/images/dog_unknown_chiku-labrador/3.jpeg","assets/images/dog_unknown_chiku-labrador/4.jpeg"]' data-videos='["assets/images/dog_unknown_chiku-labrador/2.mp4","assets/images/dog_unknown_chiku-labrador/5.mp4"]'>View Gallery</button>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section class="about-section" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-text">
-          <p class="section-eyebrow">Who we are</p>
-          <h2 class="section-title">Bahria University Animal Welfare Society</h2>
-          <p>BUAWS is a student-driven society at Bahria University's E-8 Islamabad campus, operating under the Student Resource Centre. We're dedicated to fostering compassion, providing animal care, and raising awareness about animal rights across the twin cities.</p>
-          <p>From organizing the beloved "Critter's Carnival" pet fest, to educational initiatives and community service drives — our members show up for animals who cannot speak for themselves.</p>
-          <p>This adoption portal is our way of making sure every animal we document gets a real shot at a forever home.</p>
-          <div class="about-values">
-            <div class="value-item">
-              <span class="value-icon">🤝</span>
-              <div>
-                <strong>Community Driven</strong>
-                <p>Student volunteers at the heart of every rescue.</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <span class="value-icon">💚</span>
-              <div>
-                <strong>Compassion First</strong>
-                <p>Every animal is treated with dignity and care.</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <span class="value-icon">📣</span>
-              <div>
-                <strong>Awareness & Education</strong>
-                <p>We inform, engage, and mobilize communities.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="about-visual">
-          <div class="about-card-stack">
-            <div class="stack-card sc1">🐾</div>
-            <div class="stack-card sc2">🐾</div>
-            <div class="stack-card sc3">
-              <div class="sc-inner">
-                <span class="sc-num">11</span>
-                <span class="sc-label">Animals Waiting</span>
-                <div class="sc-tagline">for their forever home</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT / ADOPT CTA -->
-  <section class="contact-section" id="contact">
-    <div class="container">
-      <div class="contact-inner" id="adopt">
-        <div class="contact-text">
-          <p class="section-eyebrow">Get in touch</p>
-          <h2>Ready to change a life?</h2>
-          <p>Fill out the form and we'll connect you with the right animal. Adoption is a big step — we're here to guide you through it.</p>
-          <div class="contact-info">
-            <p>🏫 Bahria University, E-8 Islamabad</p>
-            <p>👥 Student Resource Centre (SRC)</p>
-            <p>📘 Find us on <a href="https://www.facebook.com/OfficialSSC.BUIC/" target="_blank">Facebook @ OfficialSSC.BUIC</a></p>
-          </div>
-        </div>
-        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xkoqzkpd" method="POST">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="e.g. Ahmed Ali" required />
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone / WhatsApp</label>
-            <input type="tel" id="phone" name="phone" placeholder="+92 300 0000000" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email (optional)</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" />
-          </div>
-          <div class="form-group">
-            <label for="animal">Which animal are you interested in?</label>
-            <select id="animal" name="animal">
-              <option value="">— Select an animal —</option>
-              <option>Lahore Cat (Tayyab)</option>
-              <option>Naval Complex Stray (Hiba)</option>
-              <option>Phase 2 Cat — Urgent</option>
-              <option>Grey Tench Bata Cat</option>
-              <option>White Persian</option>
-              <option>Biscuit</option>
-              <option>Turkish Angora</option>
-              <option>Wah Cantt Survivor — Urgent</option>
-              <option>Leo (Askari 11)</option>
-              <option>Askari Puppy (Rida)</option>
-              <option>Chiku the Labrador</option>
-              <option>General Inquiry / Foster</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Tell us about your living situation, experience with pets, etc."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">Send Adoption Request</button>
-          <p class="form-note">We'll reach out within 24–48 hours via WhatsApp or email.</p>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <span class="logo-paw">🐾</span>
-          <span class="logo-text">BUAWS</span>
-          <p>Bahria University Animal Welfare Society<br/>E-8 Islamabad Campus</p>
-        </div>
-        <div class="footer-links">
-          <a href="#animals">Animals</a>
-          <a href="#about">About</a>
-          <a href="#contact">Adopt</a>
-          <a href="https://www.facebook.com/OfficialSSC.BUIC/" target="_blank">Facebook</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>Built with 💚 by BUAWS volunteers · Every animal deserves a second chance.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- GALLERY MODAL -->
-  <div class="modal" id="galleryModal">
-    <div class="modal-backdrop" id="modalBackdrop"></div>
-    <div class="modal-content">
-      <button class="modal-close" id="modalClose">✕</button>
-      <div class="modal-media" id="modalMedia"></div>
-      <div class="modal-thumbs" id="modalThumbs"></div>
-    </div>
-  </div>
-
-  <!-- ADOPT MODAL -->
-  <div class="modal" id="adoptModal">
-    <div class="modal-backdrop" id="adoptBackdrop"></div>
-    <div class="modal-content modal-small">
-      <button class="modal-close" id="adoptClose">✕</button>
-      <div class="adopt-modal-inner">
-        <div class="adopt-icon">🐾</div>
-        <h3 id="adoptModalTitle">Adopt this Animal</h3>
-        <p>Scroll down to our contact form to submit your adoption request, or reach us directly on WhatsApp!</p>
-        <a href="#contact" class="btn btn-primary" id="adoptFormLink">Go to Form</a>
-        <a href="https://wa.me/923000000000" target="_blank" class="btn btn-outline">WhatsApp Us</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- SUCCESS TOAST -->
-  <div class="toast" id="toast">✅ Message sent! We'll be in touch soon.</div>
-
-  <script src="assets/js/main.js"></script>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#animals">Meet the Animals</a>
+<a class="btn btn-ghost" href="#about">Our Story</a>
+</div>
+<div class="hero-stats">
+<div class="stat">
+<span class="stat-num">11</span>
+<span class="stat-label">Animals Listed</span>
+</div>
+<div class="stat-divider"></div>
+<div class="stat">
+<span class="stat-num">8</span>
+<span class="stat-label">Cats</span>
+</div>
+<div class="stat-divider"></div>
+<div class="stat">
+<span class="stat-num">3</span>
+<span class="stat-label">Dogs</span>
+</div>
+</div>
+</div>
+<div class="hero-scroll">
+<span>Scroll to meet them</span>
+<div class="scroll-line"></div>
+</div>
+</header>
+<!-- FILTER BAR -->
+<section class="filter-section" id="animals">
+<div class="container">
+<div class="section-header">
+<p class="section-eyebrow">Ready for adoption</p>
+<h2 class="section-title">Meet Our Animals</h2>
+</div>
+<div class="filter-bar">
+<button class="filter-btn active" data-filter="all">All Animals</button>
+<button class="filter-btn" data-filter="cat">Cats</button>
+<button class="filter-btn" data-filter="dog">Dogs</button>
+<button class="filter-btn" data-filter="adoption">For Adoption</button>
+<button class="filter-btn" data-filter="stray">Strays Needing Help</button>
+</div>
+</div>
+</section>
+<!-- ANIMAL GRID -->
+<section class="animals-section">
+<div class="container">
+<div class="animals-grid" id="animalsGrid">
+<!-- TAYYAB'S CAT -->
+<article class="animal-card" data-status="adoption" data-type="cat">
+<div class="card-media">
+<div class="media-slider" data-folder="assets/images/cat_lahore_tayyab-adoption">
+<img alt="Cat for adoption" loading="lazy" src="assets/images/cat_lahore_tayyab-adoption/1.jpeg"/>
+<img alt="Cat for adoption" loading="lazy" src="assets/images/cat_lahore_tayyab-adoption/2.jpeg"/>
+<img alt="Cat for adoption" loading="lazy" src="assets/images/cat_lahore_tayyab-adoption/3.jpeg"/>
+</div>
+<div class="media-controls">
+<button aria-label="Previous" class="mc-prev">‹</button>
+<div class="mc-dots"></div>
+<button aria-label="Next" class="mc-next">›</button>
+</div>
+<div class="card-badge badge-adoption">For Adoption</div>
+<div class="card-type-icon">🐱</div>
+<div class="card-hover-info">
+<div class="hover-name">Lahore Cat</div>
+<div class="hover-location">📍 Lahore</div>
+<div class="hover-desc">A lovely cat from Lahore looking for a permanent, loving home. Has video documentation available. Friendly and in need of a caring family.</div>
+<a class="hover-download" download="1.jpeg" href="assets/images/cat_lahore_tayyab-adoption/1.jpeg">
+<svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+          Download Photo
+        </a>
+</div></div>
+<div class="card-body">
+<div class="card-meta">
+<span class="meta-location">📍 Lahore</span>
+<span class="meta-contact">Contact: Tayyab</span>
+</div>
+<h3 class="card-name">Lahore Cat</h3>
+<p class="card-desc">A lovely cat from Lahore looking for a permanent, loving home. Has video documentation available. Friendly and in need of a caring family.</p>
+<div class="card-tags">
+<span class="tag">Cat</span>
+<span class="tag">Domestic</span>
+<span class="tag tag-green">Adoption Ready</span>
+</div>
+<div class="card-actions">
+<button class="btn btn-sm btn-primary adopt-btn" data-name="Lahore Cat (Tayyab)">Adopt Me</button>
+<button class="btn btn-sm btn-outline gallery-btn" data-folder="assets/images/cat_lahore_tayyab-adoption" data-images='["assets/images/cat_lahore_tayyab-adoption/1.jpeg","assets/images/cat_lahore_tayyab-adoption/2.jpeg","assets/images/cat_lahore_tayyab-adoption/3.jpeg"]' data-videos='["assets/images/cat_lahore_tayyab-adoption/4.mp4","assets/images/cat_lahore_tayyab-adoption/5.mp4","assets/images/cat_lahore_tayyab-adoption/6.mp4","assets/images/cat_lahore_tayyab-adoption/7.mp4","assets/images/cat_lahore_tayyab-adoption/8.mp4","assets/images/cat_lahore_tayyab-adoption/9.mp4"]'>View Gallery</button>
+</div>
+</div>
+</article>
+<!-- NAVALCOMPLEX STRAY -->
+<article class="animal-card" data-status="stray" data-type="cat">
+<div class="card-media">
+<div class="media-slider">
+<div class="video-thumb">
+<video loop="" muted="" playsinline="" src="assets/images/cat_navalcomplex_hibas-stray/1.mp4"></video>
+<div class="play-overlay">▶</div>
+</div>
+</div>
+<div class="card-badge badge-stray">Stray</div>
+<div class="card-type-icon">🐱</div>
+<div class="card-hover-info">
+<div class="hover-name">Naval Complex Stray</div>
+<div class="hover-location">📍 Naval Complex</div>
+<div class="hover-desc">Stray cat spotted near the Naval Complex area. Documented by Hiba. Needs rescue and a loving home or foster care.</div>
+</div></div>
+<div class="card-body">
+<div class="card-meta">
+<span class="meta-location">📍 Naval Complex</span>
+<span class="meta-contact">Contact: Hiba</span>
+</div>
+<h3 class="card-name">Naval Complex Stray</h3>
+<p class="card-desc">Stray cat spotted near the Naval Complex area. Documented by Hiba. Needs rescue and a loving home or foster care.</p>
+<div class="card-tags">
+<span class="tag">Cat</span>
+<span class="tag">Stray</span>
+<span class="tag tag-orange">Needs Rescue</span>
+</div>
+<div class="card-actions">
+<button class="btn btn-sm btn-primary adopt-btn" data-name="Naval Complex Stray (Hiba)">I Can Help</button>
+<button class="btn btn-sm btn-outline gallery-btn" data-images="[]" data-videos='["assets/images/cat_navalcomplex_hibas-stray/1.mp4","assets/images/cat_navalcomplex_hibas-stray/2.mp4","assets/images/cat_navalcomplex_hibas-stray/3.mp4"]'>View Videos</button>
+</div>
+</div>
+</article>
+<!-- PHASE 2 EYE RUPTURE STRAY -->
+<article class="animal-card urgent" data-status="stray" data-type="cat">
+<div class="card-media">
+<div class="media-slider">
+<img alt="Cat needing medical help" loading="lazy" src="assets/images/cat_phase2_eyerupture-stray/1.jpeg"/>
+<img alt="Cat needing medical help" loading="lazy" src="assets/images/cat_phase2_eyerupture-stray/2.jpeg"/>
+<img alt="Cat needing medical help" loading="lazy" src="assets/images/cat_phase2_eyerupture-stray/3.jpeg"/>
+</div>
+<div class="media-controls">
+<button aria-label="Previous" class="mc-prev">‹</button>
+<div class="mc-dots"></div>
+<button aria-label="Next" class="mc-next">›</button>
+</div>
+<div class="card-badge badge-urgent">Urgent Care</div>
+<div class="card-type-icon">🐱</div>
+<div class="card-hover-info">
+<div class="hover-name">Phase 2 Stray⚠ Urgent</div>
+<div class="hover-location">📍 Phase 2</div>
+<div class="hover-desc">Stray cat from Phase 2 suffering from eye rupture. Requires immediate veterinary attention. Please reach out if you can foster or cover medical costs.</div>
+<a class="hover-download" download="1.jpeg" href="assets/images/cat_phase2_eyerupture-stray/1.jpeg">
+<svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+          Download Photo
+        </a>
+</div></div>
+<div class="card-body">
+<div class="card-meta">
+<span class="meta-location">📍 Phase 2</span>
+</div>
+<h3 class="card-name">Phase 2 Stray <span class="urgent-tag">⚠ Urgent</span></h3>
+<p class="card-desc">Stray cat from Phase 2 suffering from eye rupture. Requires immediate veterinary attention. Please reach out if you can foster or cover medical costs.</p>
+<div class="card-tags">
+<span class="tag">Cat</span>
+<span class="tag">Stray</span>
+<span class="tag tag-red">Medical Needed</span>
+</div>
+<div class="card-actions">
+<button class="btn btn-sm btn-urgent adopt-btn" data-name="Phase 2 Eye Rupture Cat">Urgent Help</button>
+<button class="btn btn-sm btn-outline gallery-btn" data-images='["assets/images/cat_phase2_eyerupture-stray/1.jpeg","assets/images/cat_phase2_eyerupture-stray/2.jpeg","assets/images/cat_phase2_eyerupture-stray/3.jpeg","assets/images/cat_phase2_eyerupture-stray/4.jpeg","assets/images/cat_phase2_eyerupture-stray/5.jpeg","assets/images/cat_phase2_eyerupture-stray/6.jpeg","assets/images/cat_phase2_eyerupture-stray/7.jpeg","assets/images/cat_phase2_eyerupture-stray/8.jpeg"]' data-videos="[]">View Gallery</button>
+</div>
+</div>
+</article>
+<!-- TENCH BATA GREY STRAY -->
+<article class="animal-card" data-status="stray" data-type="cat">
+<div class="card-media">
+<div class="media-slider">
+<img alt="Grey stray cat" loading="lazy" src="assets/images/cat_tenchbata_grey-stray/1.jpeg"/>
+<img alt="Grey stray cat" loading="lazy" src="assets/images/cat_tenchbata_grey-stray/2.jpeg"/>
+<img alt="Grey stray cat" loading="lazy" src="assets/images/cat_tenchbata_grey-stray/3.jpeg"/>
+</div>
+<div class="media-controls">
+<button aria-label="Previous" class="mc-prev">‹</button>
+<div class="mc-dots"></div>
+<button aria-label="Next" class="mc-next">›</button>
+</div>
+<div class="card-badge badge-stray">Stray</div>
+<div class="card-type-icon">🐱</div>
+<div class="card-hover-info">
+<div class="hover-name">Grey Tench Bata Stray</div>
+<div class="hover-location">📍 Tench Bata</div>
+<div class="hover-desc">Beautiful grey stray cat found in Tench Bata. Has multiple photos and videos. Sweet temperament and in need of a warm, safe home.</div>
+<a class="hover-download" download="1.jpeg" href="assets/images/cat_tenchbata_grey-stray/1.jpeg">
+<svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+          Download Photo
+        </a>
+</div></div>
+<div class="card-body">
+<div class="card-meta">
+<span class="meta-location">📍 Tench Bata</span>
+</div>
+<h3 class="card-name">Grey Tench Bata Stray</h3>
+<p class="card-desc">Beautiful grey stray cat found in Tench Bata. Has multiple photos and videos. Sweet temperament and in need of a warm, safe home.</p>
+<div class="card-tags">
+<span class="tag">Cat</span>
+<span class="tag">Grey</span>
+<span class="tag tag-orange">Needs Home</span>
+</div>
+<div class="card-actions">
+<button class="btn btn-sm btn-primary adopt-btn" data-name="Grey Tench Bata Cat">Adopt Me</button>
+<button class="btn btn-sm btn-outline gallery-btn" data-images='["assets/images/cat_tenchbata_grey-stray/1.jpeg","assets/images/cat_tenchbata_grey-stray/2.jpeg","assets/images/cat_tenchbata_grey-stray/3.jpeg","assets/images/cat_tenchbata_grey-stray/4.jpeg","assets/images/cat_tenchbata_grey-stray/5.jpeg","assets/images/cat_tenchbata_grey-stray/8.jpeg","assets/images/cat_tenchbata_grey-stray/9.jpeg","assets/images/cat_tenchbata_grey-stray/10.jpeg","assets/images/cat_tenchbata_grey-stray/11.jpeg","assets/images/cat_tenchbata_grey-stray/12.jpeg","assets/images/cat_tenchbata_grey-stray/13.jpeg","assets/images/cat_tenchbata_grey-stray/14.jpeg","assets/images/cat_tenchbata_grey-stray/15.jpeg"]' data-videos='["assets/images/cat_tenchbata_grey-stray/6.mp4","assets/images/cat_tenchbata_grey-stray/7.mp4"]'>View Gallery</button>
+</div>
+</div>
+</article>
+<!-- WHITE PERSIAN -->
+<article class="animal-card" data-status="adoption" data-type="cat">
+<div class="card-media">
+<div class="media-slider">
+<img alt="White Persian cat" loading="lazy" src="assets/images/cat_tenchbata_white-persian/2.jpeg"/>
+<img alt="White Persian cat" loading="lazy" src="assets/images/cat_tenchbata_white-persian/5.jpeg"/>
+<img alt="White Persian cat" loading="lazy" src="assets/images/cat_tenchbata_white-persian/8.jpeg"/>
+</div>
+<div class="media-controls">
+<button aria-label="Previous" class="mc-prev">‹</button>
+<div class="mc-dots"></div>
+<button aria-label="Next" class="mc-next">›</button>
+</div>
+<div class="card-badge badge-adoption">For Adoption</div>
+<div class="card-type-icon">🐱</div>
+<div class="card-hover-info">
+<div class="hover-name">White Persian</div>
+<div class="hover-location">📍 Tench Bata</div>
+<div class="hover-desc">A gorgeous white Persian cat from Tench Bata. Fluffy, elegant, and ready to be someone's precious companion. Extensive photo and video documentation available.</div>
+<a class="hover-download" download="2.jpeg" href="assets/images/cat_tenchbata_white-persian/2.jpeg">
+<svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+          Download Photo
+        </a>
+</div></div>
+<div class="card-body">
+<div class="card-meta">
+<span class="meta-location">📍 Tench Bata</span>
+</div>
+<h3 class="card-name">White Persian</h3>
+<p class="card-desc">A gorgeous white Persian cat from Tench Bata. Fluffy, elegant, and ready to be someone's precious companion. Extensive photo and video documentation available.</p>
+<div class="card-tags">
+<span class="tag">Cat</span>
+<span class="tag">Persian</span>
+<span class="tag tag-green">Adoption Ready</span>
+</div>
+<div class="card-actions">
+<button class="btn btn-sm btn-primary adopt-btn" data-name="White Persian Cat">Adopt Me</button>
+<button class="btn btn-sm btn-outline gallery-btn" data-images='["assets/images/cat_tenchbata_white-persian/2.jpeg","assets/images/cat_tenchbata_white-persian/5.jpeg","assets/images/cat_tenchbata_white-persian/8.jpeg","assets/images/cat_tenchbata_white-persian/9.jpeg","assets/images/cat_tenchbata_white-persian/10.jpeg","assets/images/cat_tenchbata_white-persian/11.jpeg","assets/images/cat_tenchbata_white-persian/12.jpeg"]' data-videos='["assets/images/cat_tenchbata_white-persian/1.mp4","assets/images/cat_tenchbata_white-persian/3.mp4","assets/images/cat_tenchbata_white-persian/4.mp4","assets/images/cat_tenchbata_white-persian/6.mp4","assets/images/cat_tenchbata_white-persian/7.mp4"]'>View Gallery</button>
+</div>
+</div>
+</article>
+<!-- BISCUIT -->
+<article class="animal-card" data-status="adoption" data-type="cat">
+<div class="card-media">
+<div class="media-slider">
+<img alt="Biscuit the cat" loading="lazy" src="assets/images/cat_unknown_biscuit/biscuit.jpeg"/>
+<img alt="Biscuit the cat" loading="lazy" src="assets/images/cat_unknown_biscuit/biscuit2.jpeg"/>
+</div>
+<div class="media-controls">
+<button aria-label="Previous" class="mc-prev">‹</button>
+<div class="mc-dots"></div>
+<button aria-label="Next" class="mc-next">›</button>
+</div>
+<div class="card-badge badge-adoption">For Adoption</div>
+<div class="card-type-icon">🐱</div>
+<div class="card-hover-info">
+<div class="hover-name">Biscuit 🍪</div>
+<div class="hover-location">📍 Location TBD</div>
+<div class="hover-desc">Meet Biscuit — as sweet as the name suggests! This adorable kitty is looking for a forever home. Don't let the biscuit crumble alone.</div>
+<a class="hover-download" download="biscuit.jpeg" href="assets/images/cat_unknown_biscuit/biscuit.jpeg">
+<svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+          Download Photo
+        </a>
+</div></div>
+<div class="card-body">
+<div class="card-meta">
+<span class="meta-location">📍 Location TBD</span>
+</div>
+<h3 class="card-name">Biscuit 🍪</h3>
+<p class="card-desc">Meet Biscuit — as sweet as the name suggests! This adorable kitty is looking for a forever home. Don't let the biscuit crumble alone.</p>
+<div class="card-tags">
+<span class="tag">Cat</span>
+<span class="tag">Domestic</span>
+<span class="tag tag-green">Adoption Ready</span>
+</div>
+<div class="card-actions">
+<button class="btn btn-sm btn-primary adopt-btn" data-name="Biscuit">Adopt Biscuit</button>
+<button class="btn btn-sm btn-outline gallery-btn" data-images='["assets/images/cat_unknown_biscuit/biscuit.jpeg","assets/images/cat_unknown_biscuit/biscuit2.jpeg"]' data-videos="[]">View Photos</button>
+</div>
+</div>
+</article>
+<!-- TURKISH ANGORA -->
+<article class="animal-card" data-status="adoption" data-type="cat">
+<div class="card-media">
+<div class="media-slider">
+<img alt="Turkish Angora cat" loading="lazy" src="assets/images/cat_unknown_turkish-angora/1.jpeg"/>
+<img alt="Turkish Angora cat" loading="lazy" src="assets/images/cat_unknown_turkish-angora/2.jpeg"/>
+</div>
+<div class="media-controls">
+<button aria-label="Previous" class="mc-prev">‹</button>
+<div class="mc-dots"></div>
+<button aria-label="Next" class="mc-next">›</button>
+</div>
+<div class="card-badge badge-adoption">For Adoption</div>
+<div class="card-type-icon">🐱</div>
+<div class="card-hover-info">
+<div class="hover-name">Turkish Angora</div>
+<div class="hover-location">📍 Location TBD</div>
+<div class="hover-desc">A beautiful Turkish Angora looking for a loving home. Elegant, silky fur and a gentle personality. Videos available upon request.</div>
+<a class="hover-download" download="1.jpeg" href="assets/images/cat_unknown_turkish-angora/1.jpeg">
+<svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+          Download Photo
+        </a>
+</div></div>
+<div class="card-body">
+<div class="card-meta">
+<span class="meta-location">📍 Location TBD</span>
+</div>
+<h3 class="card-name">Turkish Angora</h3>
+<p class="card-desc">A beautiful Turkish Angora looking for a loving home. Elegant, silky fur and a gentle personality. Videos available upon request.</p>
+<div class="card-tags">
+<span class="tag">Cat</span>
+<span class="tag">Turkish Angora</span>
+<span class="tag tag-green">Adoption Ready</span>
+</div>
+<div class="card-actions">
+<button class="btn btn-sm btn-primary adopt-btn" data-name="Turkish Angora">Adopt Me</button>
+<button class="btn btn-sm btn-outline gallery-btn" data-images='["assets/images/cat_unknown_turkish-angora/1.jpeg","assets/images/cat_unknown_turkish-angora/2.jpeg"]' data-videos='["assets/images/cat_unknown_turkish-angora/3.mp4","assets/images/cat_unknown_turkish-angora/4.mp4","assets/images/cat_unknown_turkish-angora/5.mp4"]'>View Gallery</button>
+</div>
+</div>
+</article>
+<!-- WAH CANTT ROADKILL -->
+<article class="animal-card urgent" data-status="stray" data-type="cat">
+<div class="card-media">
+<div class="media-slider">
+<img alt="Injured roadkill cat" loading="lazy" src="assets/images/cat_wahcantt_roadkill/1.jpeg"/>
+<img alt="Injured roadkill cat" loading="lazy" src="assets/images/cat_wahcantt_roadkill/2.jpeg"/>
+<img alt="Injured roadkill cat" loading="lazy" src="assets/images/cat_wahcantt_roadkill/3.jpeg"/>
+</div>
+<div class="media-controls">
+<button aria-label="Previous" class="mc-prev">‹</button>
+<div class="mc-dots"></div>
+<button aria-label="Next" class="mc-next">›</button>
+</div>
+<div class="card-badge badge-urgent">Urgent Care</div>
+<div class="card-type-icon">🐱</div>
+<div class="card-hover-info">
+<div class="hover-name">Wah Cantt Survivor⚠ Urgent</div>
+<div class="hover-location">📍 Wah Cantt</div>
+<div class="hover-desc">Cat found near Wah Cantt after a road incident. Requires urgent medical care and a foster or permanent home to recover safely. Please help.</div>
+<a class="hover-download" download="1.jpeg" href="assets/images/cat_wahcantt_roadkill/1.jpeg">
+<svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+          Download Photo
+        </a>
+</div></div>
+<div class="card-body">
+<div class="card-meta">
+<span class="meta-location">📍 Wah Cantt</span>
+</div>
+<h3 class="card-name">Wah Cantt Survivor <span class="urgent-tag">⚠ Urgent</span></h3>
+<p class="card-desc">Cat found near Wah Cantt after a road incident. Requires urgent medical care and a foster or permanent home to recover safely. Please help.</p>
+<div class="card-tags">
+<span class="tag">Cat</span>
+<span class="tag">Injured</span>
+<span class="tag tag-red">Medical Needed</span>
+</div>
+<div class="card-actions">
+<button class="btn btn-sm btn-urgent adopt-btn" data-name="Wah Cantt Survivor">Urgent Help</button>
+<button class="btn btn-sm btn-outline gallery-btn" data-images='["assets/images/cat_wahcantt_roadkill/1.jpeg","assets/images/cat_wahcantt_roadkill/2.jpeg","assets/images/cat_wahcantt_roadkill/3.jpeg"]' data-videos='["assets/images/cat_wahcantt_roadkill/4.mp4","assets/images/cat_wahcantt_roadkill/5.mp4","assets/images/cat_wahcantt_roadkill/6.mp4"]'>View Gallery</button>
+</div>
+</div>
+</article>
+<!-- LEO THE DOG -->
+<article class="animal-card" data-status="adoption" data-type="dog">
+<div class="card-media">
+<div class="media-slider">
+<div class="video-thumb">
+<video loop="" muted="" playsinline="" src="assets/images/dog_askari11_leo/1.mp4"></video>
+<div class="play-overlay">▶</div>
+</div>
+</div>
+<div class="card-badge badge-adoption">For Adoption</div>
+<div class="card-type-icon">🐶</div>
+<div class="card-hover-info">
+<div class="hover-name">Leo 🦁</div>
+<div class="hover-location">📍 Askari 11</div>
+<div class="hover-desc">Meet Leo, a charismatic dog from Askari 11! He's full of life and energy. Multiple videos show his wonderful personality. He's searching for his forever human.</div>
+</div></div>
+<div class="card-body">
+<div class="card-meta">
+<span class="meta-location">📍 Askari 11</span>
+</div>
+<h3 class="card-name">Leo 🦁</h3>
+<p class="card-desc">Meet Leo, a charismatic dog from Askari 11! He's full of life and energy. Multiple videos show his wonderful personality. He's searching for his forever human.</p>
+<div class="card-tags">
+<span class="tag">Dog</span>
+<span class="tag">Playful</span>
+<span class="tag tag-green">Adoption Ready</span>
+</div>
+<div class="card-actions">
+<button class="btn btn-sm btn-primary adopt-btn" data-name="Leo">Adopt Leo</button>
+<button class="btn btn-sm btn-outline gallery-btn" data-images="[]" data-videos='["assets/images/dog_askari11_leo/1.mp4","assets/images/dog_askari11_leo/2.mp4","assets/images/dog_askari11_leo/3.mp4","assets/images/dog_askari11_leo/4.mp4","assets/images/dog_askari11_leo/5.mp4"]'>View Videos</button>
+</div>
+</div>
+</article>
+<!-- ASKARI PUPPY -->
+<article class="animal-card" data-status="adoption" data-type="dog">
+<div class="card-media">
+<div class="media-slider">
+<div class="video-thumb">
+<video loop="" muted="" playsinline="" src="assets/images/dog_askari11_puppy-ridazulfiqar/1.mp4"></video>
+<div class="play-overlay">▶</div>
+</div>
+</div>
+<div class="card-badge badge-adoption">For Adoption</div>
+<div class="card-type-icon">🐶</div>
+<div class="card-hover-info">
+<div class="hover-name">Askari Puppy</div>
+<div class="hover-location">📍 Askari 11</div>
+<div class="hover-desc">An adorable puppy from Askari 11, documented by Rida Zulfiqar. Young, energetic, and ready to grow up in a loving family. The perfect addition to a home!</div>
+</div></div>
+<div class="card-body">
+<div class="card-meta">
+<span class="meta-location">📍 Askari 11</span>
+<span class="meta-contact">Contact: Rida Zulfiqar</span>
+</div>
+<h3 class="card-name">Askari Puppy</h3>
+<p class="card-desc">An adorable puppy from Askari 11, documented by Rida Zulfiqar. Young, energetic, and ready to grow up in a loving family. The perfect addition to a home!</p>
+<div class="card-tags">
+<span class="tag">Dog</span>
+<span class="tag">Puppy</span>
+<span class="tag tag-green">Adoption Ready</span>
+</div>
+<div class="card-actions">
+<button class="btn btn-sm btn-primary adopt-btn" data-name="Askari Puppy (Rida Zulfiqar)">Adopt Puppy</button>
+<button class="btn btn-sm btn-outline gallery-btn" data-images="[]" data-videos='["assets/images/dog_askari11_puppy-ridazulfiqar/1.mp4","assets/images/dog_askari11_puppy-ridazulfiqar/2.mp4"]'>View Videos</button>
+</div>
+</div>
+</article>
+<!-- CHIKU LABRADOR -->
+<article class="animal-card" data-status="adoption" data-type="dog">
+<div class="card-media">
+<div class="media-slider">
+<img alt="Chiku the Labrador" loading="lazy" src="assets/images/dog_unknown_chiku-labrador/1.jpeg"/>
+<img alt="Chiku the Labrador" loading="lazy" src="assets/images/dog_unknown_chiku-labrador/3.jpeg"/>
+<img alt="Chiku the Labrador" loading="lazy" src="assets/images/dog_unknown_chiku-labrador/4.jpeg"/>
+</div>
+<div class="media-controls">
+<button aria-label="Previous" class="mc-prev">‹</button>
+<div class="mc-dots"></div>
+<button aria-label="Next" class="mc-next">›</button>
+</div>
+<div class="card-badge badge-adoption">For Adoption</div>
+<div class="card-type-icon">🐶</div>
+<div class="card-hover-info">
+<div class="hover-name">Chiku 🍫 (Labrador)</div>
+<div class="hover-location">📍 Location TBD</div>
+<div class="hover-desc">Chiku is a lovable Labrador with the warmest eyes and gentlest soul. Labs are known for their loyalty and family-friendliness — Chiku is no exception. Don't miss this one!</div>
+<a class="hover-download" download="1.jpeg" href="assets/images/dog_unknown_chiku-labrador/1.jpeg">
+<svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+          Download Photo
+        </a>
+</div></div>
+<div class="card-body">
+<div class="card-meta">
+<span class="meta-location">📍 Location TBD</span>
+</div>
+<h3 class="card-name">Chiku 🍫 (Labrador)</h3>
+<p class="card-desc">Chiku is a lovable Labrador with the warmest eyes and gentlest soul. Labs are known for their loyalty and family-friendliness — Chiku is no exception. Don't miss this one!</p>
+<div class="card-tags">
+<span class="tag">Dog</span>
+<span class="tag">Labrador</span>
+<span class="tag tag-green">Adoption Ready</span>
+</div>
+<div class="card-actions">
+<button class="btn btn-sm btn-primary adopt-btn" data-name="Chiku (Labrador)">Adopt Chiku</button>
+<button class="btn btn-sm btn-outline gallery-btn" data-images='["assets/images/dog_unknown_chiku-labrador/1.jpeg","assets/images/dog_unknown_chiku-labrador/3.jpeg","assets/images/dog_unknown_chiku-labrador/4.jpeg"]' data-videos='["assets/images/dog_unknown_chiku-labrador/2.mp4","assets/images/dog_unknown_chiku-labrador/5.mp4"]'>View Gallery</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- ABOUT SECTION -->
+<section class="about-section" id="about">
+<div class="container">
+<div class="about-grid">
+<div class="about-text">
+<p class="section-eyebrow">Who we are</p>
+<h2 class="section-title">Bahria University Animal Welfare Society</h2>
+<p>BUAWS is a student-driven society at Bahria University's E-8 Islamabad campus, operating under the Student Resource Centre. We're dedicated to fostering compassion, providing animal care, and raising awareness about animal rights across the twin cities.</p>
+<p>From organizing the beloved "Critter's Carnival" pet fest, to educational initiatives and community service drives — our members show up for animals who cannot speak for themselves.</p>
+<p>This adoption portal is our way of making sure every animal we document gets a real shot at a forever home.</p>
+<div class="about-values">
+<div class="value-item">
+<span class="value-icon">🤝</span>
+<div>
+<strong>Community Driven</strong>
+<p>Student volunteers at the heart of every rescue.</p>
+</div>
+</div>
+<div class="value-item">
+<span class="value-icon">💚</span>
+<div>
+<strong>Compassion First</strong>
+<p>Every animal is treated with dignity and care.</p>
+</div>
+</div>
+<div class="value-item">
+<span class="value-icon">📣</span>
+<div>
+<strong>Awareness &amp; Education</strong>
+<p>We inform, engage, and mobilize communities.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="about-visual">
+<div class="about-card-stack">
+<div class="stack-card sc1">🐾</div>
+<div class="stack-card sc2">🐾</div>
+<div class="stack-card sc3">
+<div class="sc-inner">
+<span class="sc-num">11</span>
+<span class="sc-label">Animals Waiting</span>
+<div class="sc-tagline">for their forever home</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTACT / ADOPT CTA -->
+<section class="contact-section" id="contact">
+<div class="container">
+<div class="contact-inner" id="adopt">
+<div class="contact-text">
+<p class="section-eyebrow">Get in touch</p>
+<h2>Ready to change a life?</h2>
+<p>Fill out the form and we'll connect you with the right animal. Adoption is a big step — we're here to guide you through it.</p>
+<div class="contact-info">
+<p>🏫 Bahria University, E-8 Islamabad</p>
+<p>👥 Student Resource Centre (SRC)</p>
+<p>📘 Find us on <a href="https://facebook.com" target="_blank">Facebook @BUAWS</a></p>
+</div>
+</div>
+<form action="https://formspree.io/f/YOUR_FORM_ID" class="contact-form" id="contactForm" method="POST">
+<div class="form-group">
+<label for="name">Your Name</label>
+<input id="name" name="name" placeholder="e.g. Ahmed Ali" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="phone">Phone / WhatsApp</label>
+<input id="phone" name="phone" placeholder="+92 300 0000000" required="" type="tel"/>
+</div>
+<div class="form-group">
+<label for="email">Email (optional)</label>
+<input id="email" name="email" placeholder="you@example.com" type="email"/>
+</div>
+<div class="form-group">
+<label for="animal">Which animal are you interested in?</label>
+<select id="animal" name="animal">
+<option value="">— Select an animal —</option>
+<option>Lahore Cat (Tayyab)</option>
+<option>Naval Complex Stray (Hiba)</option>
+<option>Phase 2 Cat — Urgent</option>
+<option>Grey Tench Bata Cat</option>
+<option>White Persian</option>
+<option>Biscuit</option>
+<option>Turkish Angora</option>
+<option>Wah Cantt Survivor — Urgent</option>
+<option>Leo (Askari 11)</option>
+<option>Askari Puppy (Rida)</option>
+<option>Chiku the Labrador</option>
+<option>General Inquiry / Foster</option>
+</select>
+</div>
+<div class="form-group">
+<label for="message">Your Message</label>
+<textarea id="message" name="message" placeholder="Tell us about your living situation, experience with pets, etc." rows="4"></textarea>
+</div>
+<button class="btn btn-primary btn-full" type="submit">Send Adoption Request</button>
+<p class="form-note">We'll reach out within 24–48 hours via WhatsApp or email.</p>
+</form>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container">
+<div class="footer-inner">
+<div class="footer-brand">
+<span class="logo-paw">🐾</span>
+<span class="logo-text">BUAWS</span>
+<p>Bahria University Animal Welfare Society<br/>E-8 Islamabad Campus</p>
+</div>
+<div class="footer-links">
+<a href="#animals">Animals</a>
+<a href="#about">About</a>
+<a href="#contact">Adopt</a>
+<a href="https://facebook.com" target="_blank">Facebook</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>Built with 💚 by BUAWS volunteers · Every animal deserves a second chance.</p>
+</div>
+</div>
+</footer>
+<!-- GALLERY MODAL -->
+<div class="modal" id="galleryModal">
+<div class="modal-backdrop" id="modalBackdrop"></div>
+<div class="modal-content">
+<button class="modal-close" id="modalClose">✕</button>
+<div class="modal-media" id="modalMedia"></div>
+<div class="modal-thumbs" id="modalThumbs"></div>
+</div>
+</div>
+<!-- ADOPT MODAL -->
+<div class="modal" id="adoptModal">
+<div class="modal-backdrop" id="adoptBackdrop"></div>
+<div class="modal-content modal-small">
+<button class="modal-close" id="adoptClose">✕</button>
+<div class="adopt-modal-inner">
+<div class="adopt-icon">🐾</div>
+<h3 id="adoptModalTitle">Adopt this Animal</h3>
+<p>Scroll down to our contact form to submit your adoption request, or reach us directly on WhatsApp!</p>
+<a class="btn btn-primary" href="#contact" id="adoptFormLink">Go to Form</a>
+<a class="btn btn-outline" href="https://wa.me/923000000000" target="_blank">WhatsApp Us</a>
+</div>
+</div>
+</div>
+<!-- SUCCESS TOAST -->
+<div class="toast" id="toast">✅ Message sent! We'll be in touch soon.</div>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

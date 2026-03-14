@@ -456,9 +456,67 @@ body {
 /* CARD MEDIA */
 .card-media {
   position: relative;
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/2;
   overflow: hidden;
   background: var(--cream-dark);
+}
+
+/* HOVER INFO OVERLAY */
+.card-hover-info {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,8,5,0.85) 0%, rgba(10,8,5,0.35) 55%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 6;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 16px;
+  pointer-events: none;
+}
+
+.card-media:hover .card-hover-info { opacity: 1; }
+.card-media:hover .card-hover-info .hover-download { pointer-events: all; }
+
+.hover-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
+
+.hover-location {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.72);
+  margin-bottom: 6px;
+}
+
+.hover-desc {
+  font-size: 0.77rem;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.5;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.hover-download {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 14px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 100px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  backdrop-filter: blur(6px);
+  transition: background 0.2s ease;
+  width: fit-content;
 }
 
 .media-slider {
