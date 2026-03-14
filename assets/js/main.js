@@ -324,3 +324,45 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// ── GALLERY SECTION FILTER ──
+const gfiltBtns = document.querySelectorAll('.gfilt-btn');
+const gItems = document.querySelectorAll('.gitem');
+
+gfiltBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    gfiltBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.gfilter;
+    gItems.forEach(item => {
+      const type  = item.dataset.type;
+      const media = item.dataset.media;
+      let show = false;
+      if (f === 'all')    show = true;
+      if (f === 'photos') show = media === 'photo';
+      if (f === 'videos') show = media === 'video';
+      if (f === 'cat')    show = type  === 'cat';
+      if (f === 'dog')    show = type  === 'dog';
+      item.classList.toggle('g-hidden', !show);
+    });
+  });
+});
+
+// ── GALLERY ITEM: hover plays video ──
+document.querySelectorAll('.gitem video').forEach(vid => {
+  const item = vid.closest('.gitem');
+  item.addEventListener('mouseenter', () => vid.play());
+  item.addEventListener('mouseleave', () => { vid.pause(); vid.currentTime = 0; });
+});
+
+// ── GALLERY ITEM: view button opens existing gallery modal ──
+document.querySelectorAll('.gitem-view').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const src  = btn.dataset.src;
+    const kind = btn.dataset.kind;
+    const imgs  = kind === 'photo' ? [src] : [];
+    const vids  = kind === 'video' ? [src] : [];
+    openGallery(imgs, vids);
+  });
+});

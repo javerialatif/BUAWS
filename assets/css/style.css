@@ -606,7 +606,7 @@ body {
 }
 
 .badge-adoption { background: var(--forest-pale); color: var(--forest); border: 1px solid #B8D49A; }
-.badge-stray { background: rgba(232, 217, 196, 0.9); color: var(--earth); border: 1px solid var(--bark); }
+.badge-stray { background: #EEF5E8; color: #3D6B20; border: 1px solid #B8D49A; }
 .badge-urgent { background: var(--terracotta-pale); color: var(--terracotta); border: 1px solid #E8A890; }
 
 .card-type-icon {
@@ -1145,4 +1145,160 @@ body {
   .contact-form { padding: 24px 20px; }
   .footer-inner { flex-direction: column; text-align: center; }
   .footer-links { justify-content: center; }
+}
+
+/* ============================================================
+   FULL GALLERY SECTION
+   ============================================================ */
+.gallery-section {
+  padding: 100px 0;
+  background: var(--night-mid);
+}
+
+.gallery-section .section-eyebrow { color: #7AB85A; }
+
+.gallery-section .section-title { color: var(--cream); }
+
+.gallery-subtitle {
+  color: rgba(250,246,240,0.55);
+  font-size: 0.95rem;
+  margin-top: 8px;
+  max-width: 560px;
+}
+
+/* GALLERY FILTER */
+.gallery-filter-bar {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 32px 0 40px;
+}
+
+.gfilt-btn {
+  padding: 9px 20px;
+  border-radius: 100px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  background: rgba(250,246,240,0.07);
+  border: 1px solid rgba(250,246,240,0.15);
+  color: rgba(250,246,240,0.6);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.gfilt-btn:hover, .gfilt-btn.active {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: white;
+}
+
+/* GALLERY GRID */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+/* GALLERY ITEM */
+.gitem {
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.05);
+  cursor: pointer;
+}
+
+.gitem img,
+.gitem video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gitem:hover img,
+.gitem:hover video {
+  transform: scale(1.06);
+}
+
+/* VIDEO PLAY BADGE */
+.gitem-vid-badge {
+  position: absolute;
+  top: 8px; right: 8px;
+  width: 26px; height: 26px;
+  background: rgba(0,0,0,0.55);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.65rem;
+  color: white;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ITEM OVERLAY */
+.gitem-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,8,5,0.88) 0%, rgba(10,8,5,0.2) 60%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 10px;
+  z-index: 3;
+}
+
+.gitem:hover .gitem-overlay { opacity: 1; }
+
+.gitem-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.gitem-btns {
+  display: flex; gap: 5px; align-items: center;
+}
+
+.gitem-view {
+  flex: 1;
+  padding: 5px 8px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 100px;
+  color: white;
+  font-size: 0.7rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.gitem-view:hover { background: rgba(255,255,255,0.28); }
+
+.gitem-dl {
+  width: 28px; height: 28px;
+  background: var(--forest);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.gitem-dl:hover { background: var(--forest-light); }
+
+.gitem.g-hidden { display: none; }
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 6px;
+  }
 }
