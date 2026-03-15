@@ -1,0 +1,23 @@
+title: BUAWS — Find a Forever Home
+description: Bahria University Animal Welfare Society adoption portal
+url: "https://buaws.netlify.app"
+
+# Collections
+collections:
+  animals:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: "animals"
+    values:
+      layout: null
+
+# Build
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
