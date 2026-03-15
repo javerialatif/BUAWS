@@ -4,6 +4,15 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script>
+  // Handle Netlify Identity invite/recovery tokens
+  if (window.location.hash && 
+      (window.location.hash.includes('invite_token') || 
+       window.location.hash.includes('recovery_token') ||
+       window.location.hash.includes('confirmation_token'))) {
+    window.location = '/admin/#' + window.location.hash.split('#')[1];
+  }
+</script>
 <title>BUAWS — Find a Forever Home</title>
 <meta content="Bahria University Animal Welfare Society — Adopt a rescue animal and give them a second chance at life." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
