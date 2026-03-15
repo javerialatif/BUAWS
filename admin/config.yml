@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: javerialatif/BUAWS
+  name: git-gateway
   branch: main
 
 media_folder: "assets/images/uploads"
