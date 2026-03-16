@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BUAWS — Find a Forever Home</title>
+  <meta name="description" content="Bahria University Animal Welfare Society — Adopt a rescue animal and give them a second chance at life." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.location.hash &&
+        (window.location.hash.includes('invite_token') ||
+         window.location.hash.includes('recovery_token') ||
+         window.location.hash.includes('confirmation_token'))) {
+      window.location = '/admin/#' + window.location.hash.split('#')[1];
+    }
+  </script>
+</head>
+<body>
+
+  <div class="noise-overlay"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="logo-paw">🐾</span>
+        <span class="logo-text">BUAWS</span>
+      </a>
+      <div class="nav-links">
+        <a href="#animals">Animals</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#adopt" class="nav-cta">Adopt Now</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#animals">Animals</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#adopt">Adopt Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-blob blob-1"></div>
+      <div class="hero-blob blob-2"></div>
+      <div class="hero-blob blob-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="dot"></span>
+        Bahria University · E-8 Islamabad
+      </div>
+      <h1 class="hero-title">
+        Every animal<br/>
+        <em>deserves</em> a<br/>
+        forever home.
+      </h1>
+      <p class="hero-sub">
+        BUAWS rescues, rehabilitates, and rehomes animals from around the twin cities. Browse our animals and open your heart — and home.
+      </p>
+      <div class="hero-actions">
+        <a href="#animals" class="btn btn-primary">Meet the Animals</a>
+        <a href="#about" class="btn btn-ghost">Our Story</a>
+      </div>
+      <div class="hero-stats">
+        {% assign total = site.animals | size %}
+        {% assign cats = site.animals | where: "type", "Cat" | size %}
+        {% assign dogs = site.animals | where: "type", "Dog" | size %}
+        <div class="stat">
+          <span class="stat-num">{{ total }}</span>
+          <span class="stat-label">Animals Listed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">{{ cats }}</span>
+          <span class="stat-label">Cats</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">{{ dogs }}</span>
+          <span class="stat-label">Dogs</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll to meet them</span>
+      <div class="scroll-line"></div>
+    </div>
+  </header>
+
+  {{ content }}
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-eyebrow">Who we are</p>
+          <h2 class="section-title">Bahria University Animal Welfare Society</h2>
+          <p>BUAWS is a student-driven society at Bahria University's E-8 Islamabad campus, operating under the Student Resource Centre. We're dedicated to fostering compassion, providing animal care, and raising awareness about animal rights across the twin cities.</p>
+          <p>From organizing the beloved "Critter's Carnival" pet fest, to educational initiatives and community service drives — our members show up for animals who cannot speak for themselves.</p>
+          <p>This adoption portal is our way of making sure every animal we document gets a real shot at a forever home.</p>
+          <div class="about-values">
+            <div class="value-item">
+              <span class="value-icon">🤝</span>
+              <div><strong>Community Driven</strong><p>Student volunteers at the heart of every rescue.</p></div>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">💚</span>
+              <div><strong>Compassion First</strong><p>Every animal is treated with dignity and care.</p></div>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">📣</span>
+              <div><strong>Awareness &amp; Education</strong><p>We inform, engage, and mobilize communities.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-card-stack">
+            <div class="stack-card sc1">🐾</div>
+            <div class="stack-card sc2">🐾</div>
+            <div class="stack-card sc3">
+              <div class="sc-inner">
+                <span class="sc-num">{{ total }}</span>
+                <span class="sc-label">Animals Waiting</span>
+                <div class="sc-tagline">for their forever home</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-inner" id="adopt">
+        <div class="contact-text">
+          <p class="section-eyebrow">Get in touch</p>
+          <h2>Ready to change a life?</h2>
+          <p>Fill out the form and we'll connect you with the right animal. Adoption is a big step — we're here to guide you through it.</p>
+          <div class="contact-info">
+            <p>🏫 Bahria University, E-8 Islamabad</p>
+            <p>👥 Student Resource Centre (SRC)</p>
+            <p>📘 Find us on <a href="https://www.facebook.com/OfficialSSC.BUIC/" target="_blank">Facebook @ OfficialSSC.BUIC</a></p>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xkoqzkpd" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Ahmed Ali" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" placeholder="+92 300 0000000" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email (optional)</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="animal">Which animal are you interested in?</label>
+            <select id="animal" name="animal">
+              <option value="">— Select an animal —</option>
+              {% for animal in site.animals %}
+              <option>{{ animal.name }}{% if animal.contact and animal.contact != "" %} ({{ animal.contact }}){% endif %}</option>
+              {% endfor %}
+              <option>General Inquiry / Foster</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your living situation, experience with pets, etc."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Adoption Request</button>
+          <p class="form-note">We'll reach out within 24–48 hours via WhatsApp or email.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-paw">🐾</span>
+          <span class="logo-text">BUAWS</span>
+          <p>Bahria University Animal Welfare Society<br/>E-8 Islamabad Campus</p>
+        </div>
+        <div class="footer-links">
+          <a href="#animals">Animals</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#about">About</a>
+          <a href="#contact">Adopt</a>
+          <a href="https://www.facebook.com/OfficialSSC.BUIC/" target="_blank">Facebook</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Built with 💚 by <a href="https://javerialatif.github.io/" target="_blank" style="color: rgba(250,246,240,0.7); text-decoration: underline;">Javeria Latif</a> & <a href="https://sobanmujtaba.github.io/" target="_blank" style="color: rgba(250,246,240,0.7); text-decoration: underline;">Soban Mujtaba</a>· Every animal deserves a second chance.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GALLERY MODAL -->
+  <div class="modal" id="galleryModal">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-media" id="modalMedia"></div>
+      <div class="modal-thumbs" id="modalThumbs"></div>
+    </div>
+  </div>
+
+  <!-- ADOPT MODAL -->
+  <div class="modal" id="adoptModal">
+    <div class="modal-backdrop" id="adoptBackdrop"></div>
+    <div class="modal-content modal-small">
+      <button class="modal-close" id="adoptClose">✕</button>
+      <div class="adopt-modal-inner">
+        <div class="adopt-icon">🐾</div>
+        <h3 id="adoptModalTitle">Adopt this Animal</h3>
+        <p>Scroll down to our contact form to submit your adoption request, or reach us directly on WhatsApp!</p>
+        <a href="#contact" class="btn btn-primary" id="adoptFormLink">Go to Form</a>
+        <a href="https://wa.me/923000000000" target="_blank" class="btn btn-outline">WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">✅ Message sent! We'll be in touch soon.</div>
+
+  <script src="/assets/js/main.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

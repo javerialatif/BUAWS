@@ -1,0 +1,56 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images/uploads"
+public_folder: "assets/images/uploads"
+
+collections:
+  - name: "animals"
+    label: "Animals"
+    folder: "_animals"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Animal Name", name: "name", widget: "string", hint: "e.g. Biscuit, Leo, White Persian" }
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options: ["Cat", "Dog"]
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        options:
+          - { label: "For Adoption", value: "adoption" }
+          - { label: "Rescued Stray", value: "stray" }
+          - { label: "Urgent Care Needed", value: "urgent" }
+      - { label: "Location", name: "location", widget: "string", hint: "e.g. Islamabad - Phase 2, Lahore, Askari 11" }
+      - { label: "Contact Person", name: "contact", widget: "string", required: false, hint: "e.g. Hiba, Tayyab, Rida Zulfiqar" }
+      - { label: "Description", name: "description", widget: "text", hint: "Tell adopters about this animal's personality, history, and needs." }
+      - label: "Breed / Type Tag"
+        name: "breed"
+        widget: "string"
+        required: false
+        hint: "e.g. Persian, Labrador, Turkish Angora, Domestic"
+      - label: "Urgent?"
+        name: "urgent"
+        widget: "boolean"
+        default: false
+        required: false
+      - label: "Photos"
+        name: "photos"
+        widget: "list"
+        required: false
+        field:
+          label: "Photo"
+          name: "photo"
+          widget: "image"
+      - label: "Videos"
+        name: "videos"
+        widget: "list"
+        required: false
+        field:
+          label: "Video file path"
+          name: "video"
+          widget: "string"
+          hint: "e.g. assets/images/uploads/my-video.mp4"
