@@ -1302,3 +1302,51 @@ body {
     gap: 6px;
   }
 }
+
+/* Centering for Donate Banner */
+.donate-banner {
+  background: var(--forest-pale); /* Optional: consistent background */
+  padding: 24px 0;
+  border-bottom: 1px solid var(--sand);
+}
+
+.donate-banner-inner {
+  display: flex;
+  flex-direction: column; /* Stack elements on top of each other */
+  align-items: center;    /* Horizontal centering */
+  text-align: center;     /* Center text lines */
+  gap: 20px;              /* Space between text and button */
+}
+
+.donate-banner-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.donate-banner-text div {
+  display: flex;
+  flex-direction: column;
+}
+.status-pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-size: 0.75rem; font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.pill-foster {
+  background: var(--forest-pale);
+  color: var(--forest);
+  border-color: #C9B8F0;
+}
+
+.pill-donate {
+  background: #F0E8FA;
+  color: #5C3D8F;
+  border-color: #C9B8F0;
+}

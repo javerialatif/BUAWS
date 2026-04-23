@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate — BUAWS</title>
+  <meta name="description" content="Support BUAWS and help us rescue, rehabilitate and rehome animals across the twin cities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/donate.css" />
+</head>
+<body>
+
+  <div class="noise-overlay"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="logo-paw">🐾</span>
+        <span class="logo-text">BUAWS</span>
+      </a>
+      <div class="nav-links">
+        <a href="/#animals">Animals</a>
+        <a href="/#gallery">Gallery</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+        <a href="/donate" class="nav-cta">Donate</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="/#animals">Animals</a>
+      <a href="/#gallery">Gallery</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/donate">Donate</a>
+    </div>
+  </nav>
+
+  <!-- DONATE HERO -->
+  <header class="donate-hero">
+    <div class="donate-hero-bg">
+      <div class="hero-blob blob-1"></div>
+      <div class="hero-blob blob-2"></div>
+    </div>
+    <div class="donate-hero-content container">
+      <div class="donate-hero-tag">
+        <span class="dot"></span>
+        Every rupee counts
+      </div>
+      <h1 class="donate-hero-title">
+        Your donation<br/>
+        <em>saves lives.</em>
+      </h1>
+      <p class="donate-hero-sub">
+        BUAWS runs entirely on the generosity of people like you. Funds go directly to veterinary care, food, and rescue operations for animals across the twin cities.
+      </p>
+    </div>
+  </header>
+
+  <!-- IMPACT STATS -->
+  <section class="impact-section">
+    <div class="container">
+      <div class="impact-grid">
+        <div class="impact-card">
+          <span class="impact-num">Rs. 500</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-num">Rs. 1,500</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-num">Rs. 2,000</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-num">Rs. 5,000</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANK DETAILS -->
+  <section class="bank-section">
+    <div class="container">
+      <div class="bank-grid">
+
+        <div class="bank-info">
+          <p class="section-eyebrow">How to donate</p>
+          <h2 class="section-title">Send Your Donation</h2>
+          <p>You can transfer directly to our account via bank transfer, EasyPaisa, or JazzCash. Once done, please send a screenshot to our WhatsApp or Facebook so we can acknowledge your contribution.</p>
+
+          <div class="bank-steps">
+            <div class="bank-step">
+              <div class="step-num">1</div>
+              <div>Choose your preferred payment method below and copy the account details.</div>
+            </div>
+            <div class="bank-step">
+              <div class="step-num">2</div>
+              <div>Transfer any amount you're comfortable with — no minimum.</div>
+            </div>
+            <div class="bank-step">
+              <div class="step-num">3</div>
+              <div>Send your screenshot to us on <a href="https://www.facebook.com/OfficialSSC.BUIC/" target="_blank">Facebook</a> or WhatsApp so we can thank you!</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bank-cards">
+
+          <!-- BANK TRANSFER -->
+          <div class="bank-card">
+            <div class="bank-card-header">
+              <span class="bank-icon">🏦</span>
+              <span class="bank-name">Bank Transfer</span>
+            </div>
+            <div class="bank-detail">
+              <span class="detail-label">Account Title</span>
+              <span class="detail-value">Muhammad Husban Zubair</span>
+            </div>
+            <div class="bank-detail">
+              <span class="detail-label">Bank Name</span>
+              <span class="detail-value">Askari Bank</span>
+            </div>
+            <div class="bank-detail">
+              <span class="detail-label">Account Number</span>
+              <div class="detail-copy">
+                <span class="detail-value" id="bankAcc">PK38ASCM0000263230035048</span>
+                <button class="copy-btn" onclick="copyText('bankAcc')">Copy</button>
+              </div>
+            </div>
+            <div class="bank-detail">
+              <span class="detail-label">IBAN</span>
+              <div class="detail-copy">
+                <span class="detail-value" id="bankIBAN">PK38ASCM0000263230035048</span>
+                <button class="copy-btn" onclick="copyText('bankIBAN')">Copy</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- EASYPAISA -->
+          <!-- div class="bank-card">
+            <div class="bank-card-header">
+              <span class="bank-icon">📱</span>
+              <span class="bank-name">EasyPaisa</span>
+            </div>
+            <div class="bank-detail">
+              <span class="detail-label">Account Name</span>
+              <span class="detail-value">— Add name —</span>
+            </div>
+            <div class="bank-detail">
+              <span class="detail-label">Mobile Number</span>
+              <div class="detail-copy">
+                <span class="detail-value" id="easypaisa">— Add number —</span>
+                <button class="copy-btn" onclick="copyText('easypaisa')">Copy</button>
+              </div>
+            </div>
+          </div>
+          < !-- JAZZCASH -->
+          <!-- class="bank-card">
+            <div class="bank-card-header">
+              <span class="bank-icon">💜</span>
+              <span class="bank-name">JazzCash</span>
+            </div>
+            <div class="bank-detail">
+              <span class="detail-label">Account Name</span>
+              <span class="detail-value">— Add name —</span>
+            </div>
+            <div class="bank-detail">
+              <span class="detail-label">Mobile Number</span>
+              <div class="detail-copy">
+                <span class="detail-value" id="jazzcash">— Add number —</span>
+                <button class="copy-btn" onclick="copyText('jazzcash')">Copy</button>
+              </div>
+            </div>
+          </div-->
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- URGENT ANIMALS NEEDING DONATIONS -->
+  <section class="urgent-donate-section">
+    <div class="container">
+      <p class="section-eyebrow">Right now</p>
+      <h2 class="section-title">Animals Needing Urgent Funding</h2>
+      <p class="urgent-donate-sub">These animals have active medical needs. Your donation goes directly to their treatment.</p>
+      <div class="urgent-animals-grid">
+        {% for animal in site.animals %}
+          {% if animal.needs_donation %}
+          <div class="urgent-animal-card">
+            {% if animal.photos.size > 0 %}
+            <div class="urgent-animal-img">
+              <img src="{{ animal.photos | first }}" alt="{{ animal.name }}" loading="lazy"/>
+            </div>
+            {% endif %}
+            <div class="urgent-animal-body">
+              <span class="urgent-badge">⚠ Needs Help</span>
+              <h3>{{ animal.name }}</h3>
+              <p>{{ animal.description | truncatewords: 20 }}</p>
+              {% if animal.special_instructions and animal.special_instructions != "" %}
+              <p class="urgent-instructions">🏥 {{ animal.special_instructions }}</p>
+              {% endif %}
+              <a href="/#contact" class="btn btn-urgent btn-sm">Help {{ animal.name }}</a>
+            </div>
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-paw">🐾</span>
+          <span class="logo-text">BUAWS</span>
+          <p>Bahria University Animal Welfare Society<br/>E-8 Islamabad Campus</p>
+        </div>
+        <div class="footer-links">
+          <a href="/#animals">Animals</a>
+          <a href="/#gallery">Gallery</a>
+          <a href="/#about">About</a>
+          <a href="/#contact">Adopt</a>
+          <a href="/donate">Donate</a>
+          <a href="https://www.facebook.com/OfficialSSC.BUIC/" target="_blank">Facebook</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Built with 💚 by <a href="https://javerialatif.github.io/" target="_blank" style="color: rgba(250,246,240,0.7); text-decoration: underline;">Javeria Latif</a> & <a href="https://sobanmujtaba.github.io/" target="_blank" style="color: rgba(250,246,240,0.7); text-decoration: underline;">Soban Mujtaba</a>· Every animal deserves a second chance.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">✅ Copied!</div>
+
+  <script src="/assets/js/main.js"></script>
+  <script>
+    function copyText(id) {
+      const text = document.getElementById(id).textContent.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2000);
+      });
+    }
+  </script>
+</body>
+</html>

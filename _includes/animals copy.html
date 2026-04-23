@@ -4,14 +4,14 @@
 <div class="donate-banner">
   <div class="donate-banner-inner container">
     <div class="donate-banner-text">
-      <span class="donate-banner-paw" style="font-size: 2rem;">🐾</span>
+      <span class="donate-banner-paw">🐾</span>
       <div>
-        <strong style="display: block; font-size: 1.2rem;">These animals need your help.</strong>
+        <strong>These animals need your help.</strong>
         <span>Vet bills, food, and rescue ops run on donations from people like you.</span>
       </div>
     </div>
-    <a href="/donate" class="btn btn-primary">
-      🤍 Donate Now
+    <a href="/donate" class="donate-banner-btn">
+      💜 Donate Now
     </a>
   </div>
 </div>
@@ -29,7 +29,6 @@
       <button class="filter-btn" data-filter="dog">Dogs</button>
       <button class="filter-btn" data-filter="adoption">For Adoption</button>
       <button class="filter-btn" data-filter="stray">Rescued Strays</button>
-      <button class="filter-btn" data-filter="adopted">Adopted</button>
     </div>
   </div>
 </section>
@@ -109,27 +108,56 @@
 
             <p class="card-desc">{{ animal.description }}</p>
 
+            <!-- INFO CARD -->
+            <div class="info-card">
+              <div class="info-row">
+                <div class="info-item">
+                  <span class="info-label">Gender</span>
+                  <span class="info-value">{{ animal.gender | default: "Unknown" }}</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Age</span>
+                  <span class="info-value">{{ animal.age | default: "Unknown" }}</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Breed</span>
+                  <span class="info-value">{{ animal.breed | default: "Unknown" }}</span>
+                </div>
+              </div>
+              <div class="info-row">
+                <div class="info-item">
+                  <span class="info-label">Neutered</span>
+                  <span class="info-value">{{ animal.neutered | default: "Unknown" }}</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Vaccinated</span>
+                  <span class="info-value">{{ animal.vaccinated | default: "Unknown" }}</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Litter Box</span>
+                  <span class="info-value">{{ animal.litter_trained | default: "Unknown" }}</span>
+                </div>
+              </div>
+              {% if animal.special_instructions and animal.special_instructions != "" %}
+              <div class="info-special">
+                <span class="info-special-icon">📋</span>
+                <span>{{ animal.special_instructions }}</span>
+              </div>
+              {% endif %}
+            </div>
+
             <!-- STATUS PILLS -->
             <div class="card-status-pills">
               {% if animal.foster %}
               <span class="status-pill pill-foster">🏠 Available to Foster</span>
               {% endif %}
               {% if animal.needs_donation %}
-              <a href="/donate" class="status-pill pill-donate">💚 Needs Donation</a>
-              {% endif %}
-              {% if animal.needs_adoption %}
-              <span class="status-pill pill-foster">🐾 Adopter Needed</span>
+              <a href="/donate" class="status-pill pill-donate">💜 Needs Donation</a>
               {% endif %}
             </div>
 
             <div class="card-tags">
               <span class="tag">{{ animal.type }}</span>
-              <span class="tag">{{ animal.gender | default: "Unknown" }}</span>
-              <span class="tag">{{ animal.age | default: "Unknown" }}</span>
-              <span class="tag">{{ animal.breed | default: "Unknown" }}</span>
-              <span class="tag">💉 {{ animal.vaccinated | default: "Unknown" }}</span>
-              <span class="tag">✂️ {{ animal.neutered | default: "Unknown" }}</span>
-              <span class="tag">🚽 {{ animal.litter_trained | default: "Unknown" }}</span>
               {% if animal.breed and animal.breed != "" %}
               <span class="tag">{{ animal.breed }}</span>
               {% endif %}

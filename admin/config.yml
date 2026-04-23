@@ -24,19 +24,51 @@ collections:
           - { label: "For Adoption", value: "adoption" }
           - { label: "Rescued Stray", value: "stray" }
           - { label: "Urgent Care Needed", value: "urgent" }
+          - { label: "Adopted", value: "adopted" }
+      - label: "Gender"
+        name: "gender"
+        widget: "select"
+        options: ["Male", "Female", "Unknown"]
+        default: "Unknown"
+      - { label: "Age", name: "age", widget: "string", hint: "e.g. 2 years, 4 months, Unknown", required: false }
+      - { label: "Breed", name: "breed", widget: "string", required: false, hint: "e.g. Persian, Labrador, Turkish Angora, Domestic" }
+      - label: "Neutered / Spayed?"
+        name: "neutered"
+        widget: "select"
+        options: ["Yes", "No", "Unknown"]
+        default: "Unknown"
+      - label: "Vaccinated?"
+        name: "vaccinated"
+        widget: "select"
+        options: ["Yes", "No", "Unknown"]
+        default: "Unknown"
+      - label: "Litter Box Trained?"
+        name: "litter_trained"
+        widget: "select"
+        options: ["Yes", "No", "N/A", "Unknown"]
+        default: "Unknown"
       - { label: "Location", name: "location", widget: "string", hint: "e.g. Islamabad - Phase 2, Lahore, Askari 11" }
-      - { label: "Contact Person", name: "contact", widget: "string", required: false, hint: "e.g. Hiba, Tayyab, Rida Zulfiqar" }
-      - { label: "Description", name: "description", widget: "text", hint: "Tell adopters about this animal's personality, history, and needs." }
-      - label: "Breed / Type Tag"
-        name: "breed"
-        widget: "string"
-        required: false
-        hint: "e.g. Persian, Labrador, Turkish Angora, Domestic"
+      - { label: "Contact Person", name: "contact", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Special Instructions", name: "special_instructions", widget: "text", required: false, hint: "Medical needs, dietary requirements, behavioural notes etc." }
       - label: "Urgent?"
         name: "urgent"
         widget: "boolean"
         default: false
         required: false
+      - label: "Available to Foster?"
+        name: "foster"
+        widget: "boolean"
+        default: true
+      - label: "Needs Donation?"
+        name: "needs_donation"
+        widget: "boolean"
+        default: false
+        hint: "Turn on if this animal needs medical/food funding"
+      - label: "Needs Adoption?"
+        name: "needs_adoption"
+        widget: "boolean"
+        default: true
       - label: "Photos"
         name: "photos"
         widget: "list"
